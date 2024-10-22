@@ -157,72 +157,91 @@
 <!-- End paper abstract -->
 
 
-<!-- Paper abstract -->
+<!-- Methodology -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Methodology</h2>
         <div class="content has-text-justified">
+          <figure>
+            <img src="static\images\LLMFlow.png" alt="Search Area" style="max-width: 100%;">
+            <figcaption>Figure: Search area.</figcaption>
+          </figure>
           <p>
-            
+            'High-level Reasoning Module': The 'High-level Reasoning Module' is the core of the proposed OSL algorithm. The module first generates a multi-modal prompt using a system prompt, olfaction description, and robot's egocentric visual frame. The multi-modal prompt is used to query a multi-modal LLM for high-level navigation decision. The decision is decoded and passed to the 'Low-level Action Module'.
+          </p>
+          <p>
+            'Low-level Action Module' has three primary navigation behaviors. The 'Obstacle-avoid Navigation', the 'Vision-based Navigation' and the 'Olfaction-based Navigation'. The 'Obstacle-avoid Navigation' behavior is activated when a nearby obstacle is detected by the onboard Laser Distance Sensor. The behavior directs the robot to navigate around the obstacle without deviating significantly from the direction the robot was following. The 'Vision-based Navigation' is a class of behaviors that are selected and returned from the 'High-level Reasoning' module. The core strategy of vision-based navigation is to keep the detected target in the middle of the image. The 'Olfaction-based Navigation' includes moth-inspired 'Surge' behavior for following odor and moth-inspired 'Casting' behavior for finding odor.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End Methodology -->
 
 
-<!-- Paper abstract -->
+<!-- Paper Experiment -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Experiment</h2>
         <div class="content has-text-justified">
+          <figure>
+            <img src="static\images\SearchArea.png" alt="Search Area" style="max-width: 100%;">
+            <figcaption>Figure: Search area.</figcaption>
+          </figure>
           <p>
-            
+            Search area: The focus of the experiment is to test if the proposed navigation algorithm can reason over vision and olfaction sensory inputs to determine the actions to localize an unknown odor source in an environment with obstacles and complex airflow.
+            To determine the effectiveness of olfaction and vision integration in OSL, we compared the OSL performance of single sensory modality based 'Olfaction-only' and 'Vision-only', and multi-sensory modality-based 'Vision and Olfaction Fusion' and the proposed LLM-based navigation algorithms.
+          </p>
+          <figure>
+            <img src="static\images\robotPlatform.png" alt="Robot Platform" style="max-width: 100%;">
+            <figcaption>Figure: Robotic platform.</figcaption>
+          </figure>
+          <p>
+            The robotic platform used for this task utilizes a Raspberry Pi Camera for vision sensing, an MQ3 alcohol detector and a WindSonic Anemometer for olfaction sensing, and a LDS-02 Laser Distance Sensor.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End Experiment -->
 
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+       <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/oslModel.png" alt="oslModel"/>
+        <!-- <img src="static/images/oslModel.png" alt="oslModel"/>
         <h2 class="subtitle has-text-centered">
           Odor Source Localization Model.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/LLMFlow.png" alt="LLMFlow"/>
+        <!-- <img src="static/images/LLMFlow.png" alt="LLMFlow"/>
         <h2 class="subtitle has-text-centered">
           Framework of the Proposed LLM-based Navigation Algorithm.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/SearchArea.png" alt="searchArea"/>
+        <!-- <img src="static/images/SearchArea.png" alt="searchArea"/>
         <h2 class="subtitle has-text-centered">
          Search Area for the Real-world Experiment.
        </h2>
      </div>
-     <div class="item">
+     <div class="item"> -->
       <!-- Your image here -->
-      <img src="static/images/robotPlatform.png" alt="robotPlatform"/>
+      <!-- <img src="static/images/robotPlatform.png" alt="robotPlatform"/>
       <h2 class="subtitle has-text-centered">
         Robot Platform for the Real-world Experiments.
       </h2>
@@ -230,7 +249,7 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
@@ -290,6 +309,9 @@
       <h2 class="subtitle has-text-centered">
         Proposed LLM-based Navigation Algorithm trajectory.
       </h2>
+      <p>
+        The results show that multi-modal algorithms outperform the single modality navigation algorithms. Futhermore, the proposed LLM-based algorithm outperformed the supervised learning-based 'Vision and Olfaction Fusion' navigation algorithm.
+      </p>
     </div>
   </div>
 </div>
@@ -377,7 +399,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="static/pdfs/24_MDPISensors_LLM.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/24_MDPISensors_LLM_OSL.pdf" width="100%" height="550">
           </iframe>
         
       </div>
