@@ -166,7 +166,7 @@
         <div class="content has-text-justified">
           <figure>
             <img src="static\images\LLMFlow.png" alt="Search Area" style="max-width: 100%;">
-            <figcaption>Figure: Search area.</figcaption>
+            <figcaption>Figure: Framework of the Proposed LLM-based Navigation Algorithm.</figcaption>
           </figure>
           <p>
             'High-level Reasoning Module': The 'High-level Reasoning Module' is the core of the proposed OSL algorithm. The module first generates a multi-modal prompt using a system prompt, olfaction description, and robot's egocentric visual frame. The multi-modal prompt is used to query a multi-modal LLM for high-level navigation decision. The decision is decoded and passed to the 'Low-level Action Module'.
@@ -191,15 +191,17 @@
         <div class="content has-text-justified">
           <figure>
             <img src="static\images\SearchArea.png" alt="Search Area" style="max-width: 100%;">
-            <figcaption>Figure: Search area.</figcaption>
+            <figcaption>Figure: Search area used in experiments.</figcaption>
           </figure>
           <p>
             Search area: The focus of the experiment is to test if the proposed navigation algorithm can reason over vision and olfaction sensory inputs to determine the actions to localize an unknown odor source in an environment with obstacles and complex airflow.
+          </p>
+          <p>
             To determine the effectiveness of olfaction and vision integration in OSL, we compared the OSL performance of single sensory modality based 'Olfaction-only' and 'Vision-only', and multi-sensory modality-based 'Vision and Olfaction Fusion' and the proposed LLM-based navigation algorithms.
           </p>
           <figure>
             <img src="static\images\robotPlatform.png" alt="Robot Platform" style="max-width: 100%;">
-            <figcaption>Figure: Robotic platform.</figcaption>
+            <figcaption>Figure: Robotic platform used in experiments.</figcaption>
           </figure>
           <p>
             The robotic platform used for this task utilizes a Raspberry Pi Camera for vision sensing, an MQ3 alcohol detector and a WindSonic Anemometer for olfaction sensing, and a LDS-02 Laser Distance Sensor.
@@ -281,41 +283,46 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Trajectory Graphs of the Four OSL Navigation Algorithms</h2>
+      
+      <!-- Carousel starts here -->
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/resultCarousel/O.png" alt="O"/>
-        <h2 class="subtitle has-text-centered">
-          Olfaction-only algorithm trajectory.
-        </h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/resultCarousel/O.png" alt="O"/>
+          <h2 class="subtitle has-text-centered">
+            Olfaction-only algorithm trajectory.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/resultCarousel/V.png" alt="V"/>
+          <h2 class="subtitle has-text-centered">
+            Vision-only algorithm trajectory.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/resultCarousel/F.png" alt="F"/>
+          <h2 class="subtitle has-text-centered">
+            Vision and Olfaction Fusion Navigation Algorithm trajectory.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/resultCarousel/L.png" alt="L"/>
+          <h2 class="subtitle has-text-centered">
+            Proposed LLM-based Navigation Algorithm trajectory.
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/resultCarousel/V.png" alt="V"/>
-        <h2 class="subtitle has-text-centered">
-          Vision-only algorithm trajectory.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/resultCarousel/F.png" alt="F"/>
-        <h2 class="subtitle has-text-centered">
-          Vision and Olfaction Fusion Navigation Algorithm trajectory.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/resultCarousel/L.png" alt="L"/>
-      <h2 class="subtitle has-text-centered">
-        Proposed LLM-based Navigation Algorithm trajectory.
-      </h2>
+      <!-- Carousel ends here -->
+      
+      <!-- Move the paragraph outside the carousel -->
       <p>
-        The results show that multi-modal algorithms outperform the single modality navigation algorithms. Futhermore, the proposed LLM-based algorithm outperformed the supervised learning-based 'Vision and Olfaction Fusion' navigation algorithm.
+        The results show that multi-modal algorithms outperform the single modality navigation algorithms. Furthermore, the proposed LLM-based algorithm outperformed the supervised learning-based 'Vision and Olfaction Fusion' navigation algorithm.
       </p>
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
